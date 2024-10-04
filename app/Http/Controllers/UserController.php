@@ -34,4 +34,13 @@ class UserController extends Controller
         $contact->save();
         return redirect()->route('home')->with('success','Your message has been sent successfully');
     }
+    //register page 
+    public function register(){
+        return view('user.register');
+    }
+    //login page 
+    public function login(){
+        return view('user.login');
+    }
+
 }

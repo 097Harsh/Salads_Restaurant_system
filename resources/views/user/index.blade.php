@@ -1,7 +1,9 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
+@if(session('success'))
+    <script>
+        alert('{{ session('success') }}');
+    </script>
+@endif
+
 <!doctype html>
 <html lang="en">
 

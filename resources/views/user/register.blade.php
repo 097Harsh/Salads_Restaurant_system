@@ -21,19 +21,75 @@
     <!-- //header -->
 
     <!-- inner banner -->
-    <section class="inner-banner py-5">
-        <div class="w3l-breadcrumb py-lg-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h4 class="inner-text-title font-weight-bold pt-5">Contact Us</h4>
-                        <ul class="breadcrumbs-custom-path">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="active"><i class="fas fa-angle-right mx-2"></i>Contact</li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 inner-banner-right text-center">
-                        <img src="user/assets/images/banner2.png" alt="" class="img-fluid">
+    <section class="w3l-contact-11">
+        <div class="form-41-mian py-5">
+            <div class="container py-lg-2">
+                <div class="row align-form-map justify-content-center">
+                    <div class="col-lg-12 form-inner-cont">
+                        <div class="title-content text-left">
+                            <h3 class="hny-title mb-lg-5 mb-4 text-center">Sign Up</h3>
+                        </div>
+                        <form method="post" class="signin-form" action="" enctype="multipart/form-data">
+                            @csrf
+                            <div class="form-input mb-3">
+                                <input type="text" name="uname" id="uname" class="form-control" placeholder="Enter your name" required />
+                            </div>
+                            <div class="form-input mb-3">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required />
+                            </div>
+                            <div class="form-input mb-3">
+                                <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required />
+                            </div>
+                            <div class="form-input mb-3">
+                                <input type="password" name="cpassword" id="cpassword" class="form-control" placeholder="Enter confirm password" required />
+                            </div>
+                            <div class="form-input mb-3">
+                                <input type="text" name="contact" id="contact" class="form-control" maxlength="10" placeholder="Enter your contact" required />
+                            </div>
+                            <div class="form-input mb-3">
+                                <label for="gender">Choose your gender:</label>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="male" name="gender" value="Male">
+                                    <label class="custom-control-label" for="male">Male</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="female" name="gender" value="Female">
+                                    <label class="custom-control-label" for="female">Female</label>
+                                </div>
+                            </div>
+                            <div class="form-input mb-3">
+                                <label for="date">Choose your Date of birth:</label>
+                                <input type="date" name="date" id="date" class="form-control" placeholder="DOB" required />
+                            </div>
+                            <div class="form-input mb-3">
+                                <textarea name="address" id="address" class="form-control" placeholder="Enter your address" required></textarea>
+                            </div>
+                            <div class="form-input mb-3">
+                                <input type="file" name="f" id="f" class="form-control">
+                            </div>
+                            <div class="form-input mb-3">
+                                <select class="form-control" id="city" name="city">
+                                    <option value="">--Select your city--</option>
+                                    
+                                </select>
+                            </div>
+                            <div class="form-input mb-3">
+                                <select class="form-control" id="area" name="area">
+                                     <option value="">--Select your area--</option>
+                                   
+                                    
+                                </select>
+                            </div>
+                            <div class="form-input mb-3">
+                                <select class="form-control" id="role" name="role">
+                                    <option value="">--Select your role--</option>
+                                   
+                                </select>
+                            </div>
+                            <div class="submit-button text-center">
+                                <button type="submit" class="btn btn-style" name="submit" id="submit">Submit</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

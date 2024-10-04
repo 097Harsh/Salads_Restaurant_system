@@ -23,13 +23,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('contact')}}">Contact</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('login')}}">Login</a>
+                        </li>
                     </ul>
-                    <!-- search-right -->
+                    <!-- search-right 
                     <div class="header-search position-relative">
                         <div class="search-right mx-lg-2">
                             <a href="#search" class="btn search-btn p-0" title="search">
                                 <i class="fas fa-search"></i></a>
-                            <!-- search popup -->
+                             search popup 
                             <div id="search" class="pop-overlay">
                                 <div class="popup">
                                     <form action="#search" method="GET" class="search-box">
@@ -41,10 +44,10 @@
                                 </div>
                                 <a class="close" href="#close">×</a>
                             </div>
-                            <!-- //search popup -->
+                             //search popup     
                         </div>
                     </div>
-                    <!--//search-right-->
+                    search-right-->
                 </div>
                 <!-- toggle switch for light and dark theme -->
                 <div class="cont-ser-position">
