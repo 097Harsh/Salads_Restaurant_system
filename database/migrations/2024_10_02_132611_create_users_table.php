@@ -19,19 +19,19 @@ return new class extends Migration
             $table->string('password');
             $table->bigInteger('contact');
             $table->text('address');
-            $table->string('gender');
+           // $table->string('gender');
             //foreign ket
             $table->unsignedBigInteger('city_id');
             // Foreign key constraint
-            $table->foreign('city_id')->references('city_id')->on('city')->onDelete('cascade');
+            $table->foreign('city_id')->references('city_id')->on('citys')->onDelete('cascade');
             //area table
             $table->unsignedBigInteger(column: 'area_id');
             // Foreign key constraint
-            $table->foreign('area_id')->references('area_id')->on('area')->onDelete('cascade');
+            $table->foreign('area_id')->references('area_id')->on('areas')->onDelete('cascade');
             //role table
             $table->unsignedBigInteger(column: 'role_id');
             // Foreign key constraint
-            $table->foreign('role_id')->references('role_id')->on('role')->onDelete('cascade');
+            $table->foreign('role_id')->references('role_id')->on('roles')->onDelete('cascade');
             
             $table->rememberToken();
             $table->timestamps();

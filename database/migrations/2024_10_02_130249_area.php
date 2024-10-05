@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         //
-        Schema::create('area', function (Blueprint $table) {
+        Schema::create('areas', function (Blueprint $table) {
             $table->id('area_id');
             $table->string('area_name');
             $table->unsignedBigInteger('city_id');
             // Foreign key constraint
-            $table->foreign('city_id')->references('city_id')->on('city')->onDelete('cascade');
+            $table->foreign('city_id')->references('city_id')->on('citys')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -11,6 +11,7 @@ Route::post('/store_contact', [UserController::class, 'store_contact'])->name('s
 //login
 Route::get('/login', [UserController::class, 'login'])->name('login');
 Route::get('/register', [UserController::class, 'register'])->name('register');
+Route::post('/store_regiter', [UserController::class, 'store_regiter'])->name('store_regiter');
 
 
 

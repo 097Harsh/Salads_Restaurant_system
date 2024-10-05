@@ -2,6 +2,10 @@
     <script>
         alert('{{ session('success') }}');
     </script>
+@elseif(session('reg_success'))
+    <script>
+        alert('{{ session('reg_success') }}');
+    </script>
 @endif
 
 <!doctype html>
@@ -69,7 +73,7 @@
                     <p class="mt-4">Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur adipisicing
                         elit. Non quae, fugiat. Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
                         ultrices in ligula.</p>
-                    <img class="img-fluid mt-md-5 mt-4 img-dark-color" src="assets/images/sign.png" alt=" ">
+                    <img class="img-fluid mt-md-5 mt-4 img-dark-color" src="user/assets/images/sign.png" alt=" ">
                 </div>
             </div>
         </div>

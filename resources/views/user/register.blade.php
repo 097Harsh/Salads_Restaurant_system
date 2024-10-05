@@ -29,10 +29,10 @@
                         <div class="title-content text-left">
                             <h3 class="hny-title mb-lg-5 mb-4 text-center">Sign Up</h3>
                         </div>
-                        <form method="post" class="signin-form" action="" enctype="multipart/form-data">
+                        <form method="post" class="signin-form" action="{{route('store_regiter')}}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-input mb-3">
-                                <input type="text" name="uname" id="uname" class="form-control" placeholder="Enter your name" required />
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
                             </div>
                             <div class="form-input mb-3">
                                 <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required />
@@ -46,44 +46,33 @@
                             <div class="form-input mb-3">
                                 <input type="text" name="contact" id="contact" class="form-control" maxlength="10" placeholder="Enter your contact" required />
                             </div>
-                            <div class="form-input mb-3">
-                                <label for="gender">Choose your gender:</label>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" id="male" name="gender" value="Male">
-                                    <label class="custom-control-label" for="male">Male</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" id="female" name="gender" value="Female">
-                                    <label class="custom-control-label" for="female">Female</label>
-                                </div>
-                            </div>
-                            <div class="form-input mb-3">
-                                <label for="date">Choose your Date of birth:</label>
-                                <input type="date" name="date" id="date" class="form-control" placeholder="DOB" required />
-                            </div>
+                            
                             <div class="form-input mb-3">
                                 <textarea name="address" id="address" class="form-control" placeholder="Enter your address" required></textarea>
                             </div>
-                            <div class="form-input mb-3">
-                                <input type="file" name="f" id="f" class="form-control">
-                            </div>
+                            
                             <div class="form-input mb-3">
                                 <select class="form-control" id="city" name="city">
                                     <option value="">--Select your city--</option>
-                                    
+                                    @foreach ($citys as $city)
+                                        <option value="{{ $city->city_id }}">{{ $city->city_name }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="form-input mb-3">
                                 <select class="form-control" id="area" name="area">
-                                     <option value="">--Select your area--</option>
-                                   
-                                    
+                                    <option value="">--Select your area--</option>
+                                    @foreach ($areas as $area)
+                                        <option value="{{ $area->area_id }}">{{ $area->area_name }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="form-input mb-3">
                                 <select class="form-control" id="role" name="role">
                                     <option value="">--Select your role--</option>
-                                   
+                                    @foreach ($roles as $role)
+                                        <option value="{{ $role->role_id }}">{{ $role->role_name }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="submit-button text-center">
